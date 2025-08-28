@@ -1,5 +1,5 @@
 import { Locator, Page , expect } from "@playwright/test";
-import { BasePage } from "./BasePage";
+import { BasePage } from "../utils/BasePage";
 
 export class ProductsPage extends BasePage {
     private cartLink: Locator;
@@ -14,7 +14,7 @@ export class ProductsPage extends BasePage {
   async addItemToCart(itemNames: Array<string> | string) {
     const item = this.page.locator(`.inventory_item:has-text("${itemNames}")`);
      await this.click(item.locator('button[class="btn btn_primary btn_small btn_inventory "]'));
-     //await item.locator('button[class="btn btn_primary btn_small btn_inventory "]').click();
+     
   }
  async addTwoItems(item1: string, item2: string) {
     await this.addItemToCart(item1);
@@ -25,7 +25,6 @@ export class ProductsPage extends BasePage {
     }   
     
   async goToCart() {
-    //await this.cartLink.click();
     await this.click(this.cartLink);
   }
 }

@@ -1,6 +1,7 @@
 
 📂 Project Structure
-saucedemo
+saucedemo_aug28
+│── src/ 
 │── tests/                # Test scripts
 │   ├── SauceDemo.spec.ts
 │   
@@ -13,7 +14,10 @@ saucedemo
 │   ├── CheckoutOverviewPage.ts
 │   ├── SortPage.ts
 │
-│── utils/             # Test data
+│── utils/             # Action test class
+│   ├── BasePage.ts
+│    
+│── testData/             # test data
 │   ├── testData.ts
 │
 │── playwright.config.ts  # Playwright configuration
@@ -27,8 +31,9 @@ git clone https://github.com/NirozShah/SauceDemo_28AUG.git
 
 
 2️⃣ Install Dependencies
-npx playwright install
 npm install
+npx playwright install
+
 
 3️⃣ Run Tests
 # Run all tests

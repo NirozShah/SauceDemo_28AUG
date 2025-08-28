@@ -1,5 +1,5 @@
 import { Page, Locator } from "@playwright/test";
-import { BasePage } from "./BasePage";
+import { BasePage } from "../utils/BasePage";
 
 export class CheckoutPage extends BasePage {
   private firstName: Locator;
@@ -19,11 +19,7 @@ export class CheckoutPage extends BasePage {
       await this.fill(this.firstName, fname);
       await this.fill(this.lastName, lname);
       await this.fill(this.postalCode, zip);    
-      await this.click(this.continueBtn);
-    // await this.firstName.fill(fname);
-    // await this.lastName.fill(lname);
-    // await this.postalCode.fill(zip);
-    // await this.continueBtn.click();
+      await this.click(this.continueBtn); 
     await this.page.screenshot({ path: 'test-results/screenshots/saucedemo_checkout.png' });
   }
 }

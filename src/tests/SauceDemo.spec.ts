@@ -5,7 +5,12 @@ import { CartPage } from "../pages/CartPage";
 import { CheckoutPage } from "../pages/CheckoutPage";
 import { CheckoutOverviewPage } from "../pages/CheckoutOverviewPage";
 import { SortPage}  from "../pages/SortPage";
-import { checkoutDetails, PageURL, products, users } from "../utils/testData";
+import { checkoutDetails, PageURL, products, users } from "../testData/testData";
+
+/* test to place an order with 2 items and verify the order success message
+   then navigate back to products page and sort the items by Price (low to high)  
+    and verify the items are sorted correctly 
+  */
 
 
 test("SauceDemo - Place an Order with 2 items", async ({ page }) => {
@@ -40,7 +45,7 @@ test("SauceDemo - Place an Order with 2 items", async ({ page }) => {
    //checkout
   await cart.proceedToCheckout();
 
-   // Fill customer info
+   // Fill customer info on checkout page
   await checkout.fillCheckoutDetails(
     checkoutDetails.firstName,
     checkoutDetails.lastName,
