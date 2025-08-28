@@ -23,8 +23,8 @@ saucedemo
 
 ⚙️ Setup Instructions
 1️⃣ Clone Repository
-git clone https://github.com/NirozShah/SauceDemo/tree/TestNiroz_SauceDemo
-cd SauceDemo
+git clone https://github.com/NirozShah/SauceDemo_28AUG.git
+
 
 2️⃣ Install Dependencies
 npx playwright install
